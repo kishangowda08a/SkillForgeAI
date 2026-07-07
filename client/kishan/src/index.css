@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@media print {
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: white !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-area {
+    width: 210mm;
+    min-height: auto;
+    margin: 0 !important;
+    padding: 12mm !important;
+    background: white !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .print-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: auto !important;
+    background: white !important;
+  }
+
+}

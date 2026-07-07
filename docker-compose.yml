@@ -1,0 +1,28 @@
+services:
+  backend:
+    build:
+      context: ./server
+
+    container_name: skillforge-backend
+
+    ports:
+      - "5000:5000"
+
+    env_file:
+      - ./server/.env
+
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./client/kishan
+
+    container_name: skillforge-frontend
+
+    ports:
+      - "5173:80"
+
+    depends_on:
+      - backend
+
+    restart: unless-stopped
